@@ -45,8 +45,8 @@ file(GLOB source_files "${PROJECT_SOURCE_DIR}/src/*.cpp")
 add_executable(${PROJECT_NAME} ${source_files})
 
 # Libraries
-# find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
-# target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
+find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
+target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
 
 # Custom Targets for Build Types
 ADD_CUSTOM_TARGET(debug
